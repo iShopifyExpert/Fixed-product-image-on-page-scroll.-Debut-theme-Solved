@@ -18,19 +18,26 @@ overflow: hidden;
 
 3- at the very bottom of the code paste the following code :
 
-div.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: +1; 
-@include media-query($small) {
- position: relative;
+
+    .sticky {
+      position: -webkit-sticky;
+      position: sticky;
       top: 0px;
-  }  
-}
+      background: #fff;
+      border: 0;
+      z-index: +1; 
+       @include media-query($small) {
+        position: relative;
+        top: 0px;
+       }
+    }
+
 4- Now open product-template.liquid and go to the line 43 which looks like this and remove it
 
-<div class="grid__item product-single__photos {{ product_image_width }}{% if section.settings.image_size == 'full' %} product-single__photos--full{% endif %}">
+
+
+    <div class="grid__item product-single__photos {{ product_image_width }}{% if section.settings.image_size == 'full' %} product-single__photos--full{% endif %}">
+ 
 5- Paste this code instead 
 
 
