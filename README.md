@@ -1,4 +1,5 @@
-# Fixed-product-image-on-page-scroll.-Debut-theme-Solved
+# Fixed-product-image-on-page-scroll.
+-Debut-theme-Solved
 
 
 Here is a step by step short tutorial on how to fix the left product image in Debut theme.
