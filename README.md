@@ -1,0 +1,1 @@
+# Fixed-product-image-on-page-scroll.-Debut-theme-Solved
