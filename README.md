@@ -7,10 +7,11 @@ Here is a step by step short tutorial on how to fix the left product image in De
 1- Click on online store => actions => edit code => theme.scss.liquid
 2- in the line 2638, remove the following line  (Note: if you have modified your theme.scss.liquid, you may fin this code in a different line)
 
-overflow: hidden;
+
+    overflow: hidden;
  
 
- 
+ <img src="https://community.shopify.com/c/image/serverpage/image-id/19327i9E539E9AD863CB6C/image-size/large?v=1.0&amp;px=999" title="remove.png" alt="remove.png" li-image-url="https://community.shopify.com/c/image/serverpage/image-id/19327i9E539E9AD863CB6C?v=1.0" li-image-display-id="'19327i9E539E9AD863CB6C'" li-message-uid="'602221'" li-messages-message-image="true" li-bindable="" class="lia-media-image" tabindex="0" li-bypass-lightbox-when-linked="true" li-use-hover-links="false" li-compiled="true">
 
  
 
