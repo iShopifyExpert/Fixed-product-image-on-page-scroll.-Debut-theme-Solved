@@ -1,0 +1,43 @@
+-Debut-theme-Solved
+
+Here is a step by step short tutorial on how to fix the left product image in Debut theme.
+
+1- Click on online store => actions => edit code => theme.scss.liquid 2- in the line 2638, remove the following line (Note: if you have modified your theme.scss.liquid, you may fin this code in a different line)
+
+overflow: hidden;
+remove.png
+line # 2729
+
+.page-container {
+  transition: $transition-drawer;
+  position: relative;
+  //overflow: hidden;
+
+  @include media-query($medium-up) {
+    // Prevent mobile menu inline styles from overriding desktop styles
+    // sass-lint:disable no-important
+    @include transform(translate3d(0, 0, 0));
+  }
+}
+
+3- at the very bottom of the code paste the following code :
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background: #fff;
+  border: 0;
+  z-index: +1; 
+   @include media-query($small) {
+    position: relative;
+    top: 0px;
+   }
+}
+4- Now open product-template.liquid and go to the line 39 which looks like this and remove it
+
+<div class="grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
+5- Paste this code instead
+
+<div class="sticky grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
+Click save ! And it should work
